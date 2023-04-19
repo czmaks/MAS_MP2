@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Date;
 
 public class Main {
@@ -6,9 +7,11 @@ public class Main {
         Owner o1 = new Owner("Maks", "Kowalski");
         Owner o2 = new Owner("Alicja", "Nomak");
 
-        Animal a1 = new Animal("Kot", "Plamka", 3);
-        Animal a2 = new Animal("Kot", "Typek", 5);
-        Animal a3 = new Animal("Pies", "Reks", 6);
+        Animal a1 = new Animal("Plamka", 3);
+        Animal a2 = new Animal("Typek", 5);
+        Animal a3 = new Animal("Reks", 6);
+
+        a1.setBreeds(Arrays.asList(new Breed("Mieszaniec")));
 
         TreatmentHistory th1 = new TreatmentHistory(a1, o1, new Date(2023, 03, 20));
 

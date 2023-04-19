@@ -1,14 +1,13 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Animal {
-    private List<Owner> owners = new ArrayList<>();
-    private String type;
+public class Animal { // aniamal z owner asocjacja kwalifikowana
+    private List<Owner> owners = new ArrayList<>(); //asocjajca kwalifikowana
+    private List<Breed> breeds = new ArrayList<>(); //asocjacja zwykła
     private String name;
     private int age;
 
-    public Animal(String type, String name, int age) {
-        this.type = type;
+    public Animal(String name, int age) {
         this.name = name;
         this.age = age;
     }
@@ -39,14 +38,6 @@ public class Animal {
         this.owners = owners;
     }
 
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
-    }
-
     public String getName() {
         return name;
     }
@@ -63,9 +54,17 @@ public class Animal {
         this.age = age;
     }
 
+    public List<Breed> getBreeds() {
+        return breeds;
+    }
+
+    public void setBreeds(List<Breed> breeds) {
+        this.breeds = breeds;
+    }
+
     @Override
     public String toString() {
-        String info = "Animal: " + getType() + " " + getName() + " " + getAge() + "\n";
+        String info = "Animal: " + getBreeds() + " " + getName() + " " + getAge() + "\n";
 
         for(Owner owner : owners) {
             info += " " + owner.getName() + "\n";

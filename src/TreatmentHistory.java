@@ -1,6 +1,6 @@
 import java.util.Date;
 
-public class TreatmentHistory {
+public class TreatmentHistory { //asocjacja z atrybutem
     private Animal animal;
     private Owner owner;
     private Date lastVisit;
